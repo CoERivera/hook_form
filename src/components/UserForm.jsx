@@ -11,7 +11,7 @@ const UserForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newUser = {firstName,lastName,email,password,confirmPassword};
+        const newUser = { firstName, lastName, email, password, confirmPassword };
         setUser([newUser]);
         console.log(`Welcome, ${firstName} ${lastName}.`);
     };
@@ -100,13 +100,11 @@ const UserForm = (props) => {
                     <input className="btn btn-primary" type="submit" value="Create User" />
                 </div>
             </form>
-            {user.length > 0? 
-            <div><div>First Name:&emsp;{user[0].firstName}</div>
-            <div>Last Name:&emsp;{user[0].lastName}</div>
-            <div>Email Address:&emsp;{user[0].email}</div>
-            <div>Password:&emsp;{user[0].password}</div>
-            <div>Confirm Password:&emsp;{user[0].confirmPassword}</div></div>
-            :""}
+            <div>First Name:&emsp;{firstName}</div>
+            <div>Last Name:&emsp;{lastName}</div>
+            <div>Email Address:&emsp;{email}</div>
+            <div>Password:&emsp;{password}</div>
+            <div>Confirm Password:&emsp;{confirmPassword}</div>
         </div>
     );
 };
